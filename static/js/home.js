@@ -22,7 +22,7 @@ define(function(require,exports,module){
 			var homeFn = _.template( home );
 		
 			$.ajax({
-				url:"http://lshasha.top/aiyou/static/json/home.json",
+				url:"static/json/home.json",
 				type:"GET",
 				success: function(res){
 					var bannerArr = res.banner;
@@ -63,11 +63,11 @@ define(function(require,exports,module){
 		slideFn: function(){
 			var showIndex = 2;
 			var timer = setInterval(function(){
-				$('.banner-list>li').eq(showIndex).fadeIn(100).siblings().fadeOut(100);
+				$('.banner-list>li').eq(showIndex).fadeIn(200).siblings().fadeOut(200);
 				$('.banner-point span').eq(showIndex).addClass('active').siblings().removeClass('active');
 				if(showIndex > 2){
 					showIndex = 0;
-					$('.banner-list>li').eq(0).fadeIn(100).siblings().fadeOut(100);
+					$('.banner-list>li').eq(0).fadeIn(200).siblings().fadeOut(200);
 					$('.banner-point span').eq(0).addClass('active').siblings().removeClass('active');
 				}
 				showIndex++;
